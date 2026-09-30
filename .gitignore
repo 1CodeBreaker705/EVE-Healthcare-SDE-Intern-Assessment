@@ -17,7 +17,5 @@ test.db
 *.sqlite3
 *.sqlite
 
-# Personal notes (DO NOT SUBMIT)
-Interview_Cheat_Sheet.md
 
 venv/
