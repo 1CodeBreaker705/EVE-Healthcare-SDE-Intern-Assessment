@@ -117,12 +117,12 @@ The application uses a relational database (PostgreSQL) modeled with SQLAlchemy:
 * **Booking**: The core transactional table linking a User, DiagnosticCentre, and DiagnosticTest. Tracks the computed amount, appointment_time, and status.
 * **ProcessedWebhook**: A ledger tracking event_ids used exclusively to guarantee webhook idempotency.
 
-## 🧠 Important Assumptions
+## Important Assumptions
 * **Server-Side Pricing**: The client does not send the amount during a booking request. The server automatically computes the total by querying the database to prevent client-side price manipulation.
 * **Idempotency Keys**: We assume the external payment provider sends a globally unique event_id with every webhook payload.
 * **Timezones**: All appointment times are assumed to be handled in UTC.
 
-## 🚀 Future Improvements (With More Time)
+## Future Improvements (With More Time)
 * **Real Payment Integration**: Swap the mock /payments/ endpoint with a real Stripe or Razorpay SDK.
 * **Role-Based Access Control (RBAC)**: Implement strict JWT scopes to separate Admin users (who create centres/tests) from Patient users (who book appointments).
 * **Availability Scheduling**: Implement strict time-slot concurrency checking so two patients cannot book the exact same slot.
