@@ -4,6 +4,8 @@ sqlalchemy==2.0.21
 psycopg2-binary==2.9.9
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
+bcrypt<4.0.0
+email-validator
 pydantic==2.4.2
 pydantic-settings==2.0.3
 python-multipart==0.0.6
@@ -13,3 +15,4 @@ celery==5.3.4
 redis==5.0.1
 slowapi==0.1.8
 structlog==23.1.0
+email-validator==2.2.0
